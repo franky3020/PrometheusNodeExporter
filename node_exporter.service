@@ -1,0 +1,10 @@
+[Unit]
+Description=franky-make-node_exporter
+After=network.target
+
+[Service]
+Type=simple
+ExecStart={path}/PrometheusNodeExporter/node_exporter-1.1.1.linux-amd64/node_exporter --web.listen-address=:11000
+
+[Install]
+WantedBy=multi-user.target
